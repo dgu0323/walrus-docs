@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 /// Contains the metadata for Blobs on Walrus.
-module walrus::metadata;
+module walrus::metadata{
 
 use sui::vec_map::{Self, VecMap};
 use std::string::String;
@@ -34,4 +34,5 @@ public fun insert_or_update(self: &mut Metadata, key: String, value: String) {
 /// Removes the metadata associated with the given key.
 public fun remove(self: &mut Metadata, key: &String): (String, String) {
     self.metadata.remove(key)
+}
 }

@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::blob;
+module walrus::blob{
 
 use sui::{bcs, dynamic_field, hash};
 use std::string::String;
@@ -303,4 +303,5 @@ public fun insert_or_update_metadata_pair(self: &mut Blob, key: String, value: S
 /// Aborts if the metadata does not exist.
 public fun remove_metadata_pair(self: &mut Blob, key: &String): (String, String) {
     self.metadata().remove(key)
+}
 }

@@ -3,7 +3,7 @@
 
 /// A utility module which implements an `ExchangeRate` struct and its methods.
 /// It stores a fixed point exchange rate between the Wal token and pool token.
-module walrus::pool_exchange_rate;
+module walrus::pool_exchange_rate{
 
 /// Represents the exchange rate for the staking pool.
 public struct PoolExchangeRate has store, copy, drop {
@@ -53,4 +53,5 @@ public(package) fun get_token_amount(exchange_rate: &PoolExchangeRate, wal_amoun
     let res = wal_amount * exchange_rate.pool_token_amount / exchange_rate.wal_amount;
 
     res as u64
+}
 }

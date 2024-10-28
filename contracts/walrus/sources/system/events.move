@@ -3,7 +3,7 @@
 
 /// Module to emit events. Used to allow filtering all events in the
 /// rust client (as work-around for the lack of composable event filters).
-module walrus::events;
+module walrus::events{
 
 use sui::event;
 
@@ -143,4 +143,5 @@ public(package) fun emit_epoch_parameters_selected(next_epoch: u32) {
 
 public(package) fun emit_shard_recovery_start(epoch: u32, shards: vector<u16>) {
     event::emit(ShardRecoveryStart { epoch, shards })
+}
 }

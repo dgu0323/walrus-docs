@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::shared_blob;
+module walrus::shared_blob{
 
 use sui::{balance::{Self, Balance}, coin::Coin};
 use wal::wal::WAL;
@@ -40,4 +40,5 @@ public fun extend(
     let mut coin = self.funds.withdraw_all().into_coin(ctx);
     system.extend_blob(&mut self.blob, epochs_ahead, &mut coin);
     self.funds.join(coin.into_balance());
+}
 }

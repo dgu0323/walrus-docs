@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 /// Module to certify event blobs.
-module walrus::event_blob;
+module walrus::event_blob{
 
 use sui::vec_map::VecMap;
 
@@ -156,4 +156,5 @@ public(package) fun stop_tracking_blob(self: &mut EventBlobCertificationState, b
 /// Reset blob certification state upon epoch change
 public(package) fun reset(self: &mut EventBlobCertificationState) {
     self.aggregate_weight_per_blob = sui::vec_map::empty();
+}
 }

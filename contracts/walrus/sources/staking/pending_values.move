@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::pending_values;
+module walrus::pending_values{
 
 use sui::vec_map::{Self, VecMap};
 
@@ -76,4 +76,5 @@ fun test_pending_values() {
 
     // unwrap the pending values
     let _ = pending.unwrap();
+}
 }

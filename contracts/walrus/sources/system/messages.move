@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::messages;
+module walrus::messages{
 
 use sui::{bcs, bls12381::bls12381_min_pk_verify};
 
@@ -270,4 +270,5 @@ fun test_message_creation() {
     let cert_msg = new_certified_message(msg, epoch, 1).certify_blob_message();
     assert!(cert_msg.blob_id == blob_id);
     assert!(cert_msg.epoch == epoch);
+}
 }

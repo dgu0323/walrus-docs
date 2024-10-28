@@ -5,7 +5,7 @@
 /// that only stores up to a 1000 nodes. The nodes are sorted by the amount of
 /// staked WAL. Additionally, the active set tracks the total amount of staked
 /// WAL to make the calculation of the rewards and voting power distribution easier.
-module walrus::active_set;
+module walrus::active_set{
 
 public struct ActiveSetEntry has store, copy, drop {
     node_id: ID,
@@ -278,4 +278,5 @@ fun test_evict_correct_node_with_updates() {
     assert!(active_ids.contains(&nodes[2]));
     assert!(active_ids.contains(&nodes[3]));
     assert!(active_ids.contains(&nodes[5]));
+}
 }

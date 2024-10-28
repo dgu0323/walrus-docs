@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::storage_accounting;
+module walrus::storage_accounting{
 
 use sui::balance::{Self, Balance};
 use wal::wal::WAL;
@@ -133,4 +133,5 @@ public(package) fun ring_pop_expand(self: &mut FutureAccountingRingBuffer): Futu
 /// The maximum number of epochs for which we can use `self`.
 public(package) fun max_epochs_ahead(self: &FutureAccountingRingBuffer): u32 {
     self.length
+}
 }

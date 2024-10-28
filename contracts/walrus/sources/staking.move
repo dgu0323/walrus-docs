@@ -3,7 +3,7 @@
 
 #[allow(unused_variable, unused_function, unused_field, unused_mut_parameter)]
 /// Module: staking
-module walrus::staking;
+module walrus::staking{
 
 use std::string::String;
 use sui::{clock::Clock, coin::Coin, dynamic_object_field as df};
@@ -277,4 +277,5 @@ public(package) fun is_epoch_sync_done(self: &Staking): bool {
 #[test_only]
 fun new_id(ctx: &mut TxContext): ID {
     ctx.fresh_object_address().to_id()
+}
 }

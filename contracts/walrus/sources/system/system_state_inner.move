@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 #[allow(unused_variable, unused_mut_parameter, unused_field)]
-module walrus::system_state_inner;
+module walrus::system_state_inner{
 
 use sui::{balance::Balance, coin::Coin};
 use wal::wal::WAL;
@@ -524,4 +524,5 @@ public(package) fun get_event_blob_certification_state(
     system: &SystemStateInnerV1,
 ): &EventBlobCertificationState {
     &system.event_blob_certification_state
+}
 }

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 /// Module: staking_pool
-module walrus::staking_pool;
+module walrus::staking_pool{
 
 use std::string::String;
 use sui::{balance::{Self, Balance}, table::{Self, Table}};
@@ -476,4 +476,5 @@ public(package) fun is_empty(pool: &StakingPool): bool {
     let non_empty = pending_stake.keys().count!(|epoch| pending_stake[epoch] != 0);
 
     pool.wal_balance == 0 && non_empty == 0 && pool.pool_token_balance == 0
+}
 }

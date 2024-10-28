@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::epoch_parameters;
+module walrus::epoch_parameters{
 
 /// The epoch parameters for the system.
 public struct EpochParams has store, copy, drop {
@@ -52,4 +52,5 @@ public fun epoch_params_for_testing(): EpochParams {
         storage_price_per_unit_size: 5,
         write_price_per_unit_size: 1,
     }
+}
 }

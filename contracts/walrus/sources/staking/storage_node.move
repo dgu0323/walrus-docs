@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 #[allow(unused_field, unused_function, unused_variable, unused_use)]
-module walrus::storage_node;
+module walrus::storage_node{
 
 use std::string::String;
 use sui::{bls12381::{G1, g1_from_bytes}, group_ops::Element};
@@ -154,4 +154,5 @@ public fun new_for_testing(public_key: vector<u8>): StorageNodeInfo {
 public fun destroy_cap_for_testing(cap: StorageNodeCap) {
     let StorageNodeCap { id, .. } = cap;
     id.delete();
+}
 }

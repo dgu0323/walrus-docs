@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::init;
+module walrus::init{
 
 use sui::clock::Clock;
 use walrus::{staking, system};
@@ -46,4 +46,5 @@ fun destroy(cap: InitCap) {
 #[test_only]
 public fun init_for_testing(ctx: &mut TxContext) {
     init(ctx);
+}
 }

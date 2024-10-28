@@ -8,7 +8,7 @@
 /// aggregating the parameters into a single struct. Context is used almost
 /// everywhere in the system, so it is important to have a single source of
 /// truth for the current state.
-module walrus::walrus_context;
+module walrus::walrus_context{
 
 use sui::vec_map::VecMap;
 
@@ -40,3 +40,4 @@ public(package) fun committee_selected(self: &WalrusContext): bool { self.commit
 
 /// Read the current `committee` from the context.
 public(package) fun committee(self: &WalrusContext): &VecMap<ID, vector<u16>> { &self.committee }
+}

@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::bls_aggregate;
+module walrus::bls_aggregate{
 
 use sui::bls12381::{Self, bls12381_min_pk_verify, G1};
 use sui::group_ops::{Self, Element};
@@ -196,4 +196,5 @@ public(package) fun verify_certificate(
 /// Increments the committee epoch by one.
 public fun increment_epoch_for_testing(self: &mut BlsCommittee) {
     self.epoch = self.epoch + 1;
+}
 }

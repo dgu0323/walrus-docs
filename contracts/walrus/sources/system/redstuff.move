@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::redstuff;
+module walrus::redstuff{
 
 // The length of a hash used for the Red Stuff metadata
 const DIGEST_LEN: u64 = 32;
@@ -101,4 +101,5 @@ fun test_symbol_too_large() {
     let unencoded_length = (0xffff + 1) * n_source_symbols(n_shards);
     // Test should fail here
     let _ = symbol_size(unencoded_length, n_shards);
+}
 }

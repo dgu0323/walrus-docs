@@ -4,7 +4,7 @@
 /// This module defines the `Committee` struct which stores the current
 /// committee with shard assignments. Additionally, it manages transitions /
 /// transfers of shards between committees with the least amount of changes.
-module walrus::committee;
+module walrus::committee{
 
 use sui::vec_map::{Self, VecMap};
 
@@ -132,4 +132,5 @@ public(package) fun inner(cmt: &Committee): &VecMap<ID, vector<u16>> {
 /// Copy the inner representation of the committee.
 public(package) fun to_inner(cmt: &Committee): VecMap<ID, vector<u16>> {
     cmt.0
+}
 }

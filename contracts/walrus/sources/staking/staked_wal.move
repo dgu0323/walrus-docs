@@ -7,7 +7,7 @@
 /// represents a staked amount of WALs in a staking pool. It is created in the
 /// `staking_pool` on staking and can be split, joined, and burned. The burning
 /// is performed via the `withdraw_stake` method in the `staking_pool`.
-module walrus::staked_wal;
+module walrus::staked_wal{
 
 use sui::balance::Balance;
 use wal::wal::WAL;
@@ -167,4 +167,5 @@ public fun destroy_for_testing(sw: StakedWal) {
     let StakedWal { id, principal, .. } = sw;
     principal.destroy_for_testing();
     id.delete();
+}
 }

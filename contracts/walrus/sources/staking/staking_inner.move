@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::staking_inner;
+module walrus::staking_inner{
 
 use std::string::String;
 use sui::{
@@ -727,4 +727,5 @@ fun test_quorum_below_one_value() {
     let mut queue = priority_queue::new(vector[]);
     queue.insert(1, 50);
     assert_eq!(quorum_below(&mut queue, 50), 1);
+}
 }

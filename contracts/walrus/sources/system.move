@@ -3,7 +3,7 @@
 
 #[allow(unused_variable, unused_function, unused_field, unused_mut_parameter)]
 /// Module: system
-module walrus::system;
+module walrus::system{
 
 use sui::{balance::Balance, coin::Coin, dynamic_object_field};
 use wal::wal::WAL;
@@ -220,4 +220,5 @@ public(package) fun new_for_testing_with_multiple_members(ctx: &mut TxContext): 
     let system_state_inner = system_state_inner::new_for_testing_with_multiple_members(ctx);
     dynamic_object_field::add(&mut system.id, VERSION, system_state_inner);
     system
+}
 }

@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::encoding;
+module walrus::encoding{
 
 use walrus::redstuff;
 
@@ -17,4 +17,5 @@ public fun encoded_blob_length(unencoded_length: u64, encoding_type: u8, n_shard
     // Currently only supports a single encoding type
     assert!(encoding_type == RED_STUFF_ENCODING, EInvalidEncoding);
     redstuff::encoded_blob_length(unencoded_length, n_shards)
+}
 }

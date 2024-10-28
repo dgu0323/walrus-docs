@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-module walrus::storage_resource;
+module walrus::storage_resource{
 
 const EInvalidEpoch: u64 = 0;
 const EIncompatibleEpochs: u64 = 1;
@@ -141,4 +141,5 @@ public fun destroy(storage: Storage) {
         ..,
     } = storage;
     id.delete();
+}
 }
