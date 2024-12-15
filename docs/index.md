@@ -23,7 +23,7 @@ Furthermore, encodings and blob IDs may be incompatible with the future Testnet 
 developers will be responsible for migrating any Testnet applications and data to Mainnet. Detailed
 migration guides will be provided when Mainnet becomes available.
 
-Also see the [Testnet terms of service](../testnet_tos.md) under which this Testnet is made
+Also see the [Testnet terms of service](../legal/testnet_tos.md) under which this Testnet is made
 available.
 ```
 
@@ -31,14 +31,6 @@ available.
 **All blobs stored in Walrus are public and discoverable by all.** Therefore you must not use Walrus
 to store anything that contains secrets or private data without additional measures to protect
 confidentiality.
-```
-
-```admonish danger title="Discontinuation of Walrus Devnet"
-The previous Walrus Devnet instance is now deprecated and **will be shut down after 2024-10-31**.
-All data stored on Walrus Devnet (including Walrus Sites) will no longer be accessible at that
-point. You need to re-upload all data to Walrus Testnet if you want it to remain accessible. Walrus
-Sites also need to be migrated as described on the dedicated [migration
-page](./walrus-sites/tutorial-migration.md).
 ```
 
 ## Features

@@ -38,7 +38,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/build-mdbook
       - name: Update GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.6.8
+        uses: JamesIves/github-pages-deploy-action@v4.7.1
         with:
           folder: build/html
           clean-exclude: pr-preview/
@@ -69,7 +69,6 @@ jobs:
         run: >
           RUST_LOG=site_builder=debug,walrus=debug,info
           site-builder
-          --config walrus-sites/sites-config.yaml
           update build/html ${{ vars.WALRUS_SITE_OBJECT }}
           --epochs 200
           --force
